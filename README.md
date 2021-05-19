@@ -52,15 +52,47 @@ Methodology:
 2. We used media pipe as it solves the problem of contour detection, skin segmentation, background removal and its dynamic.
 3. The hand lamdmarks are being found and then normalized to get the cordinates of 21 points on the hand.
 
-   <img src="images/hand.PNG" height="200" width="400">
+   <img src="images/hand.PNG" height="200" width="500">
 4. These cordinates are used to draw ROIs.For example- point 8,12,16 and 20 represents the index, middle, ring and pinky finger respectively. Thumb is not considered as it is tilted during photo capture.
 5. Palmprint is captured by storing and finding centroid of all the palm boundary points (0,1,5,9,13,17).
 6. Hand geometry includes Length of all fingers, palm width and distance between knuckles.
 
 ------------------------------------------------------------------------------------------
 
-Input:
-Input image
-<Img src="
+Input:<br>
+Input image<br>
+ <Img src="images/017_1.JPG" height="200" width="300"><br>
+------------------------------------------------------------------------------------------
+ 
+Output:<br>
+ Hand Landmarks<br>                                
+ <img src="images/final.png" height="200" width="300">  <br> 
+ Finger Tips<br>
+ <img src="images/1.jpg" height="100" width="100"> <img src="images/2.jpg" height="100" width="100"> <img src="images/3.jpg" height="100" width="100"> <img src="images/4.jpg" height="100" width="100"> <br>
+ Palmprint<br>
+ <img src="images/slicedpalm.png" height="200" width="300"><br>
+ Hand Geometry Values<br>
+ <img src="images/Hand_Geo_Values.PNG" height="60" width="900"><br>
+ 
+ ------------------------------------------------------------------------------------------
+ 
+ Future Work:<br>
+ Further more this work can be used to extract features and use it for authentication.<br>
+ 
+ For finger print feature extraction from a low resolution image (The image obtained from the dataset was not meant for fingerprint and hence its a big problem to extract fingerprint features):<br>
+ 1. For preprocessing, as the pic has almost no finger print it needed to be preprocessed a lot.<br>
+    <https://answers.opencv.org/question/6364/fingerprint-matching-in-mobile-devices-android-platform/><br>
+ 2. For fingerprint Matching.<br>
+    <https://github.com/Utkarsh-Deshmukh/Fingerprint-Feature-Extraction><br>
+
+ For palmprint feature extraction.<br>
+    <https://github.com/AdrianUng/palmprint-feature-extraction-techniques><br>
+ 
+ -------------------------------------------------------------------------------------------
+ References:<br>
+     [1]. <https://docs.google.com/spreadsheets/d/1WyfpljI49AqvCO_lV3-XOfHVg4Ilks_yJGWhZXCLU_M/edit?usp=sharing>
+ 
+ 
+
    
 
