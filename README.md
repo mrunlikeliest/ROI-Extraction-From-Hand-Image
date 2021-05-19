@@ -43,7 +43,7 @@ As we all know biometric authentication plays an important role in ensuring secu
 3. Using deep learning (limited computational power)
 4. Extracting ROIs using Haar Cascade.
  
-Much detailed report i.e input output can be found in Methods_That_Didnt_Work folder.
+Codes can be found in Methods_That_Didnt_Work folder.
 
 ------------------------------------------------------------------------------------------
 
