@@ -51,6 +51,16 @@ Methodology:
 1. MediaPipe Hands is a high-fidelity hand and finger tracking solution. It employs machine learning (ML) to infer 21 3D landmarks of a hand from just a single frame.
 2. We used media pipe as it solves the problem of contour detection, skin segmentation, background removal and its dynamic.
 3. The hand lamdmarks are being found and then normalized to get the cordinates of 21 points on the hand.
-<img src="images/hand.png" height="200" width="400">
+
+   <img src="images/hand.PNG" height="200" width="400">
+4. These cordinates are used to draw ROIs.For example- point 8,12,16 and 20 represents the index, middle, ring and pinky finger respectively. Thumb is not considered as it is tilted during photo capture.
+5. Palmprint is captured by storing and finding centroid of all the palm boundary points (0,1,5,9,13,17).
+6. Hand geometry includes Length of all fingers, palm width and distance between knuckles.
+
+------------------------------------------------------------------------------------------
+
+Input:
+Input image
+<Img src="
    
 
