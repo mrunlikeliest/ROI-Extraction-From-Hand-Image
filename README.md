@@ -10,7 +10,7 @@
 -----------------------------------------------------------------------------------------
 
 # Abstract:<br>
-As we all know biometric authentication plays an important role in ensuring security and extraction biometric features are always a challenge. We have separate dataset available for separate biometrics but an attempt is being made to extract all three biometric i.e finger tip, Palmprint, and Hand-geometry from a single hand image. We have tried different methods and finally found the most apt solution. A significant amount of time is spent on surveying different research papers on "Authentication with the help of different biometrics" and collecting all possible datasets.
+As we all know biometric authentication plays an important role in ensuring security and extraction of biometric features is always a challenge. We have separate datasets available for separate biometrics but an attempt is being made to extract all three biometrics i.e. fingertip, Palmprint, and Hand-geometry from a single hand image. We have tried different methods and finally found the most apt solution. A significant amount of time is spent on surveying different research papers on "Authentication with the help of different biometrics" and collecting all possible datasets.
 
 ------------------------------------------------------------------------------------------
 # Datasets that can be used for further research works:<br>
@@ -38,12 +38,12 @@ As we all know biometric authentication plays an important role in ensuring secu
 ------------------------------------------------------------------------------------------
 
 ## Methods that didn't work:
-1. Skin Segmentation->Contour detection->Finding min area contour to find finger print.
+1. Skin Segmentation->Contour detection->Finding min area contour to find fingerprint.
 2. Skin Segmentation->Finding Convex hull and Contour intersection point and finally locating ROI
 3. Using deep learning (limited computational power)
 4. Extracting ROIs using Haar Cascade.
  
-Codes can be found in Methods_That_Didnt_Work folder.
+Codes can be found in the Methods_That_Didnt_Work folder.
 
 ------------------------------------------------------------------------------------------
 
@@ -55,13 +55,13 @@ Codes can be found in Methods_That_Didnt_Work folder.
 # Methodology:
 
 1. MediaPipe Hands is a high-fidelity hand and finger tracking solution. It employs machine learning (ML) to infer 21 3D landmarks of a hand from just a single frame.
-2. We used media pipe as it solves the problem of contour detection, skin segmentation, background removal and its dynamic.
-3. The hand lamdmarks are being found and then normalized to get the cordinates of 21 points on the hand.
+2. We used media pipe as it solves the problem of contour detection, skin segmentation, background removal, and dynamics.
+3. The hand landmarks are found and then normalized to get the coordinates of 21 points on the hand.
 
    <img src="images/hand.PNG" height="200" width="500">
-4. These cordinates are used to draw ROIs.For example- point 8,12,16 and 20 represents the index, middle, ring and pinky finger respectively. Thumb is not considered as it is tilted during photo capture.
-5. Palmprint is captured by storing and finding centroid of all the palm boundary points (0,1,5,9,13,17).
-6. Hand geometry includes Length of all fingers, palm width and distance between knuckles.
+4. These coordinates are used to draw ROIs.For example- points 8,12,16 and 20 represent the index, middle, ring, and pinky finger respectively. The thumb is not considered as it is tilted during photo capture.
+5. Palmprint is captured by storing and finding the centroid of all the palm boundary points (0,1,5,9,13,17).
+6. Hand geometry includes Length of all fingers, palm width, and distance between knuckles.
 
 ------------------------------------------------------------------------------------------
 
@@ -83,10 +83,10 @@ Input image<br>
  ------------------------------------------------------------------------------------------
  
  # Future Work:<br>
- Further more this work can be used to extract features and use it for authentication.<br>
+ Furthermore, this work can be used to extract features and use them for authentication.<br>
  
- For finger print feature extraction from a low resolution image (The image obtained from the dataset was not meant for fingerprint and hence its a big problem to extract fingerprint features):<br>
- 1. For preprocessing, as the pic has almost no finger print it needed to be preprocessed a lot.<br>
+ For fingerprint feature extraction from a low-resolution image (The image obtained from the dataset was not meant for fingerprints and hence it is a big problem to extract fingerprint features):<br>
+ 1. For preprocessing, as the pic has almost no fingerprint it needed to be preprocessed a lot.<br>
     <https://answers.opencv.org/question/6364/fingerprint-matching-in-mobile-devices-android-platform/><br>
  2. For fingerprint Matching.<br>
     <https://github.com/Utkarsh-Deshmukh/Fingerprint-Feature-Extraction><br>
